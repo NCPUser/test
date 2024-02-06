@@ -15,7 +15,6 @@
     "ISpectatorTeleportC2SPacket",
     "MixinBackground",
     "MixinClientCommonNetworkHandler",
-    "MixinClientPlayerEntity",
     "MixinClientPlayerInteractionManager",
     "MixinEntity",
     "MixinExplosion",
