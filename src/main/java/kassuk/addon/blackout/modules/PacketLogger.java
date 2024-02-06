@@ -135,7 +135,7 @@ public class PacketLogger extends BlackOutModule {
         if (packet instanceof RecipeCategoryOptionsC2SPacket p) return "RecipeCategoryOptions guiOpen:" + p.isGuiOpen() + " filtering:" + p.isFilteringCraftable() + " category:" + p.getCategory().name();
         if (packet instanceof RenameItemC2SPacket p) return "RenameItem name:" + p.getName();
         if (packet instanceof RequestCommandCompletionsC2SPacket p) return "RequestCommandCompletions partialCommand:" + p.getPartialCommand() + " completionId:" + p.getCompletionId();
-        if (packet instanceof ResourcePackStatusC2SPacket p) return "ResourcePackStatus status:" + p.getStatus().name();
+        if (packet instanceof ResourcePackStatusC2SPacket p) return "ResourcePackStatus status:" + p.status().name();
         if (packet instanceof SelectMerchantTradeC2SPacket p) return "SelectMerchantTrade tradeId:" + p.getTradeId();
         if (packet instanceof SpectatorTeleportC2SPacket p) return "SpectatorTeleport UUID:" + ((ISpectatorTeleportC2SPacket) p).getID();
         if (packet instanceof TeleportConfirmC2SPacket p) return "TeleportConfirm id:" + p.getTeleportId();
@@ -237,10 +237,9 @@ public class PacketLogger extends BlackOutModule {
         if (packet instanceof ProfilelessChatMessageS2CPacket p) return "ProfilelessChatMessage message:" + p.message();
         if (packet instanceof RemoveEntityStatusEffectS2CPacket p) return "RemoveEntityStatusEffect effect:" + (p.getEffectType() == null ? "null" : p.getEffectType().getName());
         if (packet instanceof RemoveMessageS2CPacket p) return "RemoveMessage signature:" + p.messageSignature();
-        if (packet instanceof ResourcePackSendS2CPacket p) return "ResourcePackSend URL:" + p.getUrl() + " hash:" + p.getHash() + " prompt:" + p.getPrompt() + " required:" + p.isRequired();
+        if (packet instanceof ResourcePackSendS2CPacket p) return "ResourcePackSend URL:" + p.url() + " hash:" + p.hash() + " prompt:" + p.prompt() + " required:" + p.required();
         if (packet instanceof ScoreboardDisplayS2CPacket p) return "ScoreboardDisplay name:" + p.getName() + " slot:" + p.getSlot();
         if (packet instanceof ScoreboardObjectiveUpdateS2CPacket p) return "ScoreboardObjectiveUpdate name:" + p.getName() + " type:" + p.getType() + " mode:" + p.getMode() + " displayName:" + p.getDisplayName();
-        if (packet instanceof ScoreboardPlayerUpdateS2CPacket p) return "ScoreboardPlayerUpdate playerName:" + p.getPlayerName() + " objectiveName:" + p.getObjectiveName() + " updateMode:" + p.getUpdateMode() + " score:" + p.getScore();
         if (packet instanceof ScreenHandlerPropertyUpdateS2CPacket p) return "ScreenHandlerPropertyUpdate syncId:" + p.getSyncId() + " propertyId:" + p.getPropertyId() + " value:" + p.getValue();
         if (packet instanceof ScreenHandlerSlotUpdateS2CPacket p) return "ScreenHandlerSlotUpdate syncId:" + p.getSyncId() + " slot:" + p.getSlot() + " item:" + p.getStack().getItem().getName() + " count:" + p.getStack().getCount() + " revision:" + p.getRevision();
         if (packet instanceof SelectAdvancementTabS2CPacket p) return "SelectAdvancementTab tabId:" + p.getTabId();
